@@ -8,16 +8,22 @@ This program is written in python 3.4. Copy and paste to an IDE and run in conso
 
 ### Example
 ### Game start
-For power=80% and alpha=0.05% \n
-The population mean is 29 and the SD is 5 \n
-Guess the sample size required to detect a loss of 8%\n
+For power=80% and alpha=0.05% 
 
-Guess N: 10 \n
+The population mean is 29 and the SD is 5 
+
+Guess the sample size required to detect a loss of 8%
+
+
+Guess N: 10 
 
 ### Output
-The calculated N was: 31\n
-You have underestimated the number of samples by: 21\n
-You would need 31 samples to detect a loss of 9%\n
+The calculated N was: 31
+
+You have underestimated the number of samples by: 21
+
+You would need 31 samples to detect a loss of 9%
+
 
 
 
