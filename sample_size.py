@@ -145,7 +145,7 @@ class guessN:
 
         
     def exit(self): 
-   		sys.exit()
+   		root.destroy()
    		pass
   
 root=Tk()
