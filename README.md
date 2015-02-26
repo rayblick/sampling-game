@@ -4,7 +4,20 @@ This program was designed to give the player an appreciation for sample size, an
 
 The game is based on an equation (That is, n=((alpha+beta)/(x1-x2)/sd)^2) that has several fixed terms, such as alpha and beta, and several randomly generate population sizes and distributions.
 
-This program is written in python 3.4. Copy and paste to an IDE and run in console. Alternatively, save the file (e.g. sample_game.py) and run at the command line. On windows OS, open the start menu and type cmd in the search bar and hit enter. Navigate to the directory of the script (in this case sample_game.py) and type **python sample_game.py**. The game will run once and exit. Further effort is needed to create a user interface and to make the program executable without using the code. 
+This program is written in python 3.4. Copy and paste to an IDE and run in console. Alternatively, save the file (e.g. sample_game.py) and run at the command line. On windows OS, open the start menu and type cmd in the search bar and hit enter. Navigate to the directory of the script (in this case sample_game.py) and type **python sample_game.py**. The game will run once and exit. Further effort is needed to create a user interface and to make the program executable without using the code.  
+
+# Updated GUI version
+
+To run the updated GUI version of this game follow the instructions below.
+
+**Linux:**
+
+  - Make sure you have `python 3.4` and the `python3-tk` package installed.
+  - to run the newer GUI version of the game run the script sample_size.py from the terminal:
+
+```sh
+./sample_size.py
+```
 
 ### Example
 ### Game start
