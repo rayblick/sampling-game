@@ -26,7 +26,7 @@ To run the updated GUI version of this game follow the instructions below for yo
   - if the script needs to be made executable run this line of code before running above:
 
 ```sh
-chmode +x sample_size.py
+chmod +x sample_size.py
 ```
 
 **MacOS**
