@@ -12,12 +12,12 @@ To run the updated GUI version of this game follow the instructions below for yo
 
 **Windows:**
 
-  - under construction...
+  - *under construction...*
 
 **Linux:**
 
   - Make sure you have `python 3.4` and the `python3-tk` package installed.
-  - to run the newer GUI version of the game run the script sample_size.py from the terminal:
+  - to run the newer GUI version of the game run the script `sample_size.py` from the terminal:
 
 ```sh
 ./sample_size.py
@@ -31,7 +31,7 @@ chmode +x sample_size.py
 
 **MacOS**
 
-  - under construction... (should work in same manner as Linux though)
+  - *under construction...* (should work in same manner as Linux though)
 
 ### Example
 ### Game start
