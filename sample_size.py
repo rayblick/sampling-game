@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Feb 18 13:24:25 2015
+Last modified on Thur Feb 26 21:45:32 2015
 
 @author: uqrblick
 """
@@ -56,7 +57,7 @@ class guessN:
         PlayButton.grid(row=2, column = 1, padx=5, pady=5)
         ttk.Button(self.frame_content, text="Submit",command=self.submit).grid(row=3, column = 1, padx=5, pady=5)
         ttk.Button(self.frame_content, text="Clear",command=self.clear).grid(row=2,column = 2,padx=5,pady=5)  
-        ttk.Button(self.frame_content, text="Exit game").grid(row=3, column = 2, padx=5,pady=5)
+        ttk.Button(self.frame_content, text="Exit game",command=self.exit).grid(row=3, column = 2, padx=5,pady=5)
         
         # Create plotting frame
         self.frame_plot = ttk.Frame(master)
@@ -143,11 +144,11 @@ class guessN:
         # activate the play button again!!
 
         
-    def exit_game(self):
-        pass
+    def exit(self): 
+   		sys.exit()
+   		pass
   
 root=Tk()
 app=guessN(root)
+root.title("guessN! v0.1 by RayBlick")
 root.mainloop()
-
-       
