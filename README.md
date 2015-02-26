@@ -8,7 +8,11 @@ This program is written in python 3.4. Copy and paste to an IDE and run in conso
 
 # Updated GUI version
 
-To run the updated GUI version of this game follow the instructions below.
+To run the updated GUI version of this game follow the instructions below for your specific OS.
+
+**Windows:**
+
+  - under construction...
 
 **Linux:**
 
@@ -18,6 +22,16 @@ To run the updated GUI version of this game follow the instructions below.
 ```sh
 ./sample_size.py
 ```
+
+  - if the script needs to be made executable run this line of code before running above:
+
+```sh
+chmode +x sample_size.py
+```
+
+**MacOS**
+
+  - under construction... (should work in same manner as Linux though)
 
 ### Example
 ### Game start
