@@ -150,5 +150,5 @@ class guessN:
   
 root=Tk()
 app=guessN(root)
-root.title("guessN! v0.1 by RayBlick")
+root.title("guessN! (GUI) v0.1 by RayBlick")
 root.mainloop()
