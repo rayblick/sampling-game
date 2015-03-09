@@ -10,7 +10,7 @@ from tkinter import ttk
 import random, math
 import matplotlib
 matplotlib.use('TkAgg')
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
 from matplotlib.figure import Figure
 
 
@@ -58,16 +58,22 @@ class guessN:
 
         
         # Add buttons for playing and quiting the program
-        self.PlayButton =  ttk.Button(self.frame_content, text = "Play",command = self.play)
+        self.PlayButton =  ttk.Button(self.frame_content, text = "Play", underline = 0, command = self.play)
         self.PlayButton.grid(row = 2, column = 1, padx = 5, pady = 5)
-        self.SubmitButton = ttk.Button(self.frame_content, text = "Submit",command = self.submit, state = DISABLED)
+        self.SubmitButton = ttk.Button(self.frame_content, text = "Submit", underline = 0, command = self.submit, state = DISABLED)
         self.SubmitButton.grid(row = 3, column = 1, padx = 5, pady = 5)
-        self.ClearButton = ttk.Button(self.frame_content, text = "Clear",command = self.clear)
+        self.ClearButton = ttk.Button(self.frame_content, text = "Clear", underline = 0, command = self.clear)
         self.ClearButton.grid(row = 2, column = 2, padx = 5,pady = 5)
-        self.ExitButton = ttk.Button(self.frame_content, text="Exit game",command=self.exit_game)
+        self.ExitButton = ttk.Button(self.frame_content, text="Exit game", underline = 0, command= self.exit_game)
         self.ExitButton.grid(row = 3, column = 2, padx = 5, pady = 5)
 
-   
+        # bind quick keys
+        root.bind("<Control-p>", (lambda e: self.play()))
+        root.bind("<Control-s>", (lambda e: self.submit()))
+        root.bind("<Control-c>", (lambda e: self.clear()))
+        root.bind("<Control-e>", (lambda e: self.exit_game()))
+
+        
         # Create plotting frame
         self.frame_plot = ttk.Frame(master)
         self.frame_plot.pack(side = RIGHT)
