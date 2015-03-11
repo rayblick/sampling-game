@@ -2,14 +2,14 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Feb 18 13:24:25 2015
-Last modified on Sunday Feb 8 18:13:00 2015
+Last modified on Wednesday Mar 11 19:02:00 2015
 @author: uqrblick
 """
 from tkinter import *
 from tkinter import ttk
 import random, math
 import matplotlib
-matplotlib.use('TkAgg')
+#matplotlib.use('TkAgg')
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
 from matplotlib.figure import Figure
 
@@ -31,10 +31,10 @@ class guessN:
         self.style.configure('Header.TLabel',font = ('Arial', 20, 'bold'))
       
         # build the application header
-        self.img = PhotoImage(file = "images//logo.gif").subsample(5, 5)
+        self.img = PhotoImage(file = "images//nlogo.gif").subsample(5, 5)
         ttk.Label(self.frame_header, image = self.img, anchor = CENTER).grid(row = 0, column = 0, rowspan = 2, padx = 10, pady = 10)
         ttk.Label(self.frame_header, text = "Welcome to guessN!", style='Header.TLabel').grid(row = 0,column = 1, padx = 10, pady = 10)
-        ttk.Label(self.frame_header, wraplength = 700, text = ("Evaluate your own skill in guessing how many samples " 
+        ttk.Label(self.frame_header, wraplength = 640, text = ("Evaluate your own skill in guessing how many samples " 
                                                     "you need to record a loss in a population...\n")).grid(row = 1, column = 1, padx = 10)      
        
         # create a frame to hold the content
@@ -48,13 +48,13 @@ class guessN:
         self.entry_guessN = ttk.Entry(self.frame_content, width = 24)
         self.entry_guessN.bind("<Return>", (lambda e: self.submit()))
         
-        self.text_instructions = Text(self.frame_content, width = 65, height = 8, font = ('Arial', 11))
-        self.text_results = Text(self.frame_content, width = 65, height = 10, font = ('Arial', 11))
+        self.text_instructions = Text(self.frame_content, width = 65, height = 4, font = ('Arial', 11))
+        self.text_results = Text(self.frame_content, width = 65, height = 4, font = ('Arial', 11))
         
         # specify the location of widgets
         self.entry_guessN.grid(row = 2, column = 0, padx = 10, pady = 10)
-        self.text_instructions.grid(row=0, column = 0, columnspan = 3,padx = 10, pady = 10)
-        self.text_results.grid(row = 4, column = 0, columnspan = 3, padx = 10, pady = 10)
+        self.text_instructions.grid(row = 0, column = 0, columnspan = 3,padx = 10, pady = 10)
+        self.text_results.grid(row = 4, column = 0, columnspan = 3, padx = 10, pady = 15)
 
         
         # Add buttons for playing and quiting the program
@@ -105,7 +105,7 @@ class guessN:
         self.clear()
         
         # Add instruction text to the first text window
-        self.instruction_message = ("If you have a population mean of %s and a standard deviation of %s,"
+        self.instruction_message = ("If you have a sample mean of %s and a standard deviation of %s,"
                                     "\nwhat sample size is required to detect a loss of %s percent? \n"
                                     "\nNote: alpha = 5 percent and power = 80 percent" %(self.mu1, self.sd, self.loss))
         
@@ -156,6 +156,8 @@ class guessN:
                 message = "Correct"
 
             # append the data for plotting
+            self.f.clear()
+            self.a = self.f.add_subplot(1, 1, 1)
             self.a.hist(self.error_data, bins = 15, color = "cornflowerblue")
             self.canvas.show()
         
